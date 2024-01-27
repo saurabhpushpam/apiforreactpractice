@@ -95,9 +95,8 @@ const getpost = async (req, res) => {
     }));
 
     // Send the formatted data as the response
-    // res.status(200).json(formattedData);
+    res.status(200).json(formattedData);
 
-    res.status(200).send({ success: true, msg: "All details :", data: formattedData });
 
   } catch (error) {
     res.status(400).send(error.message);
